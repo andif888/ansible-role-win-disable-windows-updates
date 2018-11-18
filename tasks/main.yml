@@ -1,0 +1,7 @@
+---
+# tasks file for ansible-role-win-disable-windows-updates
+- name: disable windows updates
+  win_service:
+    name: wuauserv
+    start_mode: disabled
+    state: stopped
